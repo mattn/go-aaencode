@@ -2,7 +2,7 @@ package main
 
 import (
 	. "github.com/mattn/go-aaencode"
-	. "http"
+	. "net/http"
 )
 
 func main() {

@@ -1,10 +1,10 @@
 package aaencode
 
 import (
-	"http"
-	"http/httptest"
 	"fmt"
 	"io/ioutil"
+	"net/http"
+	"net/http/httptest"
 	"strconv"
 	"strings"
 )
