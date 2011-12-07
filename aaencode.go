@@ -64,7 +64,7 @@ func AAEncode(js string) (out string) {
 		} else {
 			out += "(oﾟｰﾟo)+ "
 			for _, cc := range fmt.Sprintf("%04x", c) {
-				i, _ := strconv.Btoi64(string(cc), 16)
+				i, _ := strconv.ParseInt(string(cc), 16, 64)
 				out += aa[i] + "+ "
 			}
 		}
