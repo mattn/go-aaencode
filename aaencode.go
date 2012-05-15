@@ -75,7 +75,7 @@ func AAEncode(js string) (out string) {
 
 func AAFilter(f http.Handler) http.Handler {
 	return http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
-		if strings.HasSuffix(req.URL.RawPath, ".js") {
+		if strings.HasSuffix(req.URL.Path, ".js") {
 			rec := httptest.NewRecorder()
 			f.ServeHTTP(rec, req)
 			body, _ := ioutil.ReadAll(rec.Body)
